@@ -13,7 +13,7 @@
   "author": "GlobalTechInfo",
   "license": "MIT",
   "dependencies": {
-    "@whiskeysockets/baileys" : "^6.7.5",
+    "@whiskeysockets/baileys" : "latest",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@bochilteam/scraper": "^4.2.4",
     "@develoka/angka-terbilang-js": "^1.4.2",
