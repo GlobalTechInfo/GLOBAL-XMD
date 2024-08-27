@@ -24,7 +24,7 @@
     "api-dylux": "^1.4.4",
     "aptoide-scraper": "^1.0.1",
     "awesome-phonenumber": "^4.4.0",
-    "axios": "^0.24.0",
+    "axios": "^0.28.0",
     "brainly-scraper": "^1.0.3",
     "cfonts": "^3.1.1",
     "chalk": "^4.1.2",
