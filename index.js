@@ -1,7 +1,6 @@
 require('./settings');
 
 
-
 const fs = require('fs');
 
 
