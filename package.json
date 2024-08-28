@@ -1,6 +1,6 @@
 {
   "name": "GLOBAL-XMD",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Bot WhatsApp Using Lib Baileys Multi Device",
   "main": "start.js",
   "type": "commonjs",
