@@ -6,7 +6,7 @@ const chalk = require('chalk');
 //owmner v card
 global.ytname = "YT: GlobalTechInfo" //ur yt chanel name
 global.socialm = "GitHub: GlobalTechInfo" //ur github or insta name
-global.location = "Pakistan, Karachi" //ur location
+global.location = "Pakistan, Karachi, Karachi" //ur location
 
 //new
 global.botname = 'GLOBAL-XMD' //ur bot name
@@ -25,7 +25,7 @@ global.premium = ["923444844060"] // Premium User
 
 //channel id
 global.xchannel = {
-	jid: '120363222395675670@newsletter'
+	jid: '120363319098372999@newsletter'
 	}
 
 //bot sett
