@@ -277,7 +277,7 @@ async function MessagesUpsert(GlobalTechInc, message, store) {
 		if (msg.key.id.length === 22) return
 		if (!msg.message) return
 		const m = await Serialize(GlobalTechInc, msg, store)
-		require('../XeonCheems15')(GlobalTechInc, m, message, store);
+		require('../GlobalTech')(GlobalTechInc, m, message, store);
 		if (type === 'interactiveResponseMessage' && m.quoted && m.quoted.fromMe) {
 			let apb = await generateWAMessage(m.chat, { text: JSON.parse(m.msg.nativeFlowResponseMessage.paramsJson).id, mentions: m.mentionedJid }, {
 				userJid: GlobalTechInc.user.id,
