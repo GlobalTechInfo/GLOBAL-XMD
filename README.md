@@ -23,3 +23,8 @@
 
 <a href='https://replit.com/@tlptrends92/GLOBAL-SESSIONS#main.sh' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/PAIRING CODE-2-green?style=for-the-badge&logo=opencv&logoColor=white'/></a>
 
+### DEPLOY TO HEROKU 
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/GlobalTechInfo/GLOBAL-MD)
+
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/GlobalTechInfo/GLOBAL-MD&branch=main&name=your-app&service_type=web&instance_type=free&ports=3000;http;/&env[MY_KEY]=my_value&region=Frankfurt)
