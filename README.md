@@ -26,5 +26,3 @@
 ### DEPLOY TO HEROKU 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/GlobalTechInfo/GLOBAL-MD)
-
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/GlobalTechInfo/GLOBAL-MD&branch=main&name=your-app&service_type=web&instance_type=free&ports=3000;http;/&env[MY_KEY]=my_value&region=Frankfurt)
