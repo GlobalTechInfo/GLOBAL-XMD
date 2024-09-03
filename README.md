@@ -23,6 +23,8 @@
 
 <a href='https://replit.com/@tlptrends92/GLOBAL-SESSIONS#main.sh' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/PAIRING CODE-2-green?style=for-the-badge&logo=opencv&logoColor=white'/></a>
 
+`AFTER YOU GET CREDS FILE UPLOAD IT INSIDE SESSION FOLDER OF FORK`
+
 ### DEPLOY TO HEROKU 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/GlobalTechInfo/GLOBAL-XMD)
@@ -33,3 +35,18 @@
 ### BOT HOSTING PANEL
 <a href='https://bot-hosting.net/?aff=1097457675723341836' target="_blank"><img alt='Panel Link'
 src='https://img.shields.io/badge/HOSTING%20PANEL-blue?style=for-the-badge&logo=Cloudflare&logoColor=white'/></a>
+
+
+### `For Termux/Ubuntu`
+```bash
+apt update && apt upgrade -y
+pkg install proot-distro
+proot-distro install ubuntu
+proot-distro login ubuntu
+apt update && apt upgrade -y
+apt install -y webp git nodejs ffmpeg imagemagick
+git clone https://github.com/<your gitHub Username>/GLOBAL-XMD
+cd GLOBAL-XMD
+npm install
+node index --pairing-code
+```
