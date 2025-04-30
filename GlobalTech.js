@@ -36,7 +36,7 @@ const { download } = require('aptoide-scraper');
 const scp2 = require('./lib/scraper2');
 const jsobfus = require('javascript-obfuscator');
 const {translate} = require('@vitalets/google-translate-api');
-const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, getBinaryNodeChildren, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, downloadContentFromMessage} = require('@fizzxydev/baileys-pro');
+const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, getBinaryNodeChildren, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, downloadContentFromMessage} = require('baileys-pro');
 
 let ntnsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 let bad = JSON.parse(fs.readFileSync('./src/badword.json'))
