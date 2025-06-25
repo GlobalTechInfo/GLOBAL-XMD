@@ -1737,8 +1737,7 @@ case 'update': {
   return replygcqasim(combinedMessage);
 }
 break;
-
-			case 'gita-verse': case 'gita': case 'bhagavatgita': {
+case 'gita-verse': case 'gita': case 'bhagavatgita': {
 	try {
     // Extract the verse number from the command text.
     let verseNumber = m.text.split(' ')[1]
@@ -1772,8 +1771,8 @@ ${json.purport}`
     // Handle the error appropriately
   }
 }
-break
-			case 'quran': {
+break;
+case 'quran': {
     try {
     // Extract the surah number or name from the command text.
     let surahInput = m.text.split(' ')[1]
@@ -1823,7 +1822,8 @@ ${translatedTafsirEnglish.text}`
     replygcqasim(`Error: ${error.message}`)
   }
   }
-  break
+  break;
+		
 case 'animequote': {
   try {
     const res = await fetch('https://some-random-api.com/animu/quote');
@@ -1891,7 +1891,7 @@ ${translatedChapterHindi.text}
 }
 break;
 
-			case 'addlist':
+case 'addlist':
 if (!QasimTheCreator) return QasimStickOwner()
 if (!m.isGroup) return QasimStickGroup()
 var args1 = text.split("@")[0]
@@ -1929,7 +1929,7 @@ teks += `│\n└────────────⭓\n\n`
 replygcqasim(teks)
 }
 break
-			case 'setprefix':
+case 'setprefix':
                 if (!QasimTheCreator) return QasimStickOwner()
                 if (!text) return replygcqasim(`Example : ${prefix + command} #`)
                 global.xprefix = text
@@ -2016,42 +2016,7 @@ case 'lockcmd': {
                 global.db.sticker[hash].locked = !/^un/i.test(command)
                 replygcqasim('Done!')
             }
-            break
-case 'hentaivid':
-case 'hentai':
-case 'hentaivideo': {
-  if (!m.isGroup) return QasimStickGroup();
-  if (!AntiNsfw) return replygcqasim(mess.nsfw);
-
-  await QasimStickWait();
-
-  const { hentai } = require('./lib/scraper.js');
-  const anu = await hentai();
-
-  // Random selection from the array
-  const result912 = anu[Math.floor(Math.random() * anu.length)];
-
-  // Prepare the info text
-  const infoText = `${themeemoji} Title : ${result912.title}
-${themeemoji} Category : ${result912.category}
-${themeemoji} Mimetype : ${result912.type}
-${themeemoji} Views : ${result912.views_count}
-${themeemoji} Shares : ${result912.share_count}
-${themeemoji} Source : ${result912.link}
-${themeemoji} Media Url : ${result912.video_1}`;
-
-  // Send video as a normal video message with caption
-  await GlobalTechInc.sendMessage(m.chat, {
-    video: { url: result912.video_1 },
-    caption: infoText,
-  }, { quoted: m });
-
-  // Optionally, you can also send the info text separately if you want plain text only
-  // await replygcqasim(infoText);
-
-  return;
-}
-break;
+            break;
 
 case 'trap': {
     if (!m.isGroup) return QasimStickGroup()
@@ -2068,7 +2033,7 @@ case 'trap': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'hentai-neko':
 case 'hneko': {
@@ -2084,7 +2049,7 @@ case 'hneko': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'hentai-waifu':
 case 'nwaifu': {
@@ -2101,7 +2066,7 @@ case 'nwaifu': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'gasm': {
     if (!m.isGroup) return QasimStickGroup()
@@ -2117,7 +2082,7 @@ case 'gasm': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'milf': {
     if (!m.isGroup) return QasimStickGroup()
@@ -2133,7 +2098,7 @@ case 'milf': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animespank': {
     if (!m.isGroup) return QasimStickGroup()
@@ -2149,7 +2114,7 @@ case 'animespank': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'blowjob': {
     if (!m.isGroup) return QasimStickGroup()
@@ -2166,7 +2131,7 @@ case 'blowjob': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'cuckold': {
     if (!m.isGroup) return QasimStickGroup()
@@ -2183,7 +2148,7 @@ case 'cuckold': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'eba': {
     if (!m.isGroup) return QasimStickGroup()
@@ -2200,7 +2165,7 @@ case 'eba': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'pussy': {
     if (!m.isGroup) return QasimStickGroup()
@@ -2217,7 +2182,7 @@ case 'pussy': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'yuri': {
     if (!m.isGroup) return QasimStickGroup()
@@ -2234,7 +2199,7 @@ case 'yuri': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'zettai': {
     if (!m.isGroup) return QasimStickGroup()
@@ -2251,7 +2216,7 @@ case 'zettai': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'gifblowjob': {
     if (!m.isGroup) return QasimStickGroup()
@@ -2270,7 +2235,7 @@ case 'gifblowjob': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animeawoo': {
     await QasimStickWait()
@@ -2284,7 +2249,7 @@ case 'animeawoo': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animemegumin': {
     await QasimStickWait()
@@ -2297,7 +2262,7 @@ case 'animemegumin': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animeshinobu': {
     await QasimStickWait()
@@ -2310,7 +2275,7 @@ case 'animeshinobu': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animehandhold': {
     await QasimStickWait()
@@ -2323,7 +2288,7 @@ case 'animehandhold': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animehighfive': {
     await QasimStickWait()
@@ -2336,7 +2301,7 @@ case 'animehighfive': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animecringe': {
     await QasimStickWait()
@@ -2349,7 +2314,7 @@ case 'animecringe': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animedance': {
     await QasimStickWait()
@@ -2362,7 +2327,7 @@ case 'animedance': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animehappy': {
     await QasimStickWait()
@@ -2375,7 +2340,7 @@ case 'animehappy': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animeglomp': {
     await QasimStickWait()
@@ -2388,7 +2353,7 @@ case 'animeglomp': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animesmug': {
     await QasimStickWait()
@@ -2401,7 +2366,7 @@ case 'animesmug': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animeblush': {
     await QasimStickWait()
@@ -2414,7 +2379,7 @@ case 'animeblush': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animewave': {
     await QasimStickWait()
@@ -2427,7 +2392,7 @@ case 'animewave': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animesmile': {
     await QasimStickWait()
@@ -2440,7 +2405,7 @@ case 'animesmile': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animepoke': {
     await QasimStickWait()
@@ -2453,7 +2418,7 @@ case 'animepoke': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animewink': {
     await QasimStickWait()
@@ -2466,7 +2431,7 @@ case 'animewink': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animebonk': {
     await QasimStickWait()
@@ -2479,7 +2444,7 @@ case 'animebonk': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animebully': {
     await QasimStickWait()
@@ -2492,7 +2457,7 @@ case 'animebully': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animeyeet': {
     await QasimStickWait()
@@ -2505,7 +2470,7 @@ case 'animeyeet': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animebite': {
     await QasimStickWait()
@@ -2518,7 +2483,7 @@ case 'animebite': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animelick': {
     await QasimStickWait()
@@ -2531,7 +2496,7 @@ case 'animelick': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animekill': {
     await QasimStickWait()
@@ -2544,7 +2509,7 @@ case 'animekill': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animecry': {
     await QasimStickWait()
@@ -2557,7 +2522,7 @@ case 'animecry': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animewlp': {
     await QasimStickWait()
@@ -2570,7 +2535,7 @@ case 'animewlp': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animekiss': {
     await QasimStickWait()
@@ -2583,7 +2548,7 @@ case 'animekiss': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animehug': {
     await QasimStickWait()
@@ -2596,7 +2561,7 @@ case 'animehug': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animeneko': {
     await QasimStickWait()
@@ -2609,7 +2574,7 @@ case 'animeneko': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animepat': {
     await QasimStickWait()
@@ -2622,7 +2587,7 @@ case 'animepat': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animeslap': {
     await QasimStickWait()
@@ -2635,7 +2600,7 @@ case 'animeslap': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animecuddle': {
     await QasimStickWait()
@@ -2648,7 +2613,7 @@ case 'animecuddle': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animewaifu': {
     await QasimStickWait()
@@ -2661,7 +2626,7 @@ case 'animewaifu': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animenom': {
     await QasimStickWait()
@@ -2674,7 +2639,7 @@ case 'animenom': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animefoxgirl': {
     await QasimStickWait()
@@ -2687,7 +2652,7 @@ case 'animefoxgirl': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animetickle': {
     await QasimStickWait()
@@ -2700,7 +2665,7 @@ case 'animetickle': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animegecg': {
     await QasimStickWait()
@@ -2713,7 +2678,7 @@ case 'animegecg': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'dogwoof': {
     await QasimStickWait()
@@ -2726,7 +2691,7 @@ case 'dogwoof': {
     }, { quoted: m })
 
     break
-}
+};
 
 case '8ballpool': {
     await QasimStickWait()
@@ -2739,7 +2704,7 @@ case '8ballpool': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'goosebird': {
     await QasimStickWait()
@@ -2752,7 +2717,7 @@ case 'goosebird': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animefeed': {
     await QasimStickWait()
@@ -2765,7 +2730,7 @@ case 'animefeed': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'animeavatar': {
     await QasimStickWait()
@@ -2778,7 +2743,7 @@ case 'animeavatar': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'lizardpic': {
     await QasimStickWait()
@@ -2791,7 +2756,7 @@ case 'lizardpic': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'catmeow': {
     await QasimStickWait()
@@ -2804,7 +2769,7 @@ case 'catmeow': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'anime': {
     if (!text) return replygcqasim(`Which anime are you lookin for?`)
@@ -2835,7 +2800,7 @@ case 'anime': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'loli': {
     let baseUrl = 'https://weeb-api.vercel.app/'
@@ -2850,7 +2815,7 @@ case 'loli': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'waifu': {
     let baseUrl = 'https://weeb-api.vercel.app/'
@@ -2865,7 +2830,7 @@ case 'waifu': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'neko': {
     let baseUrl = 'https://weeb-api.vercel.app/'
@@ -2880,7 +2845,7 @@ case 'neko': {
     }, { quoted: m })
 
     break
-}
+};
 
 case 'traceanime': {
   try {
@@ -2928,9 +2893,9 @@ case 'traceanime': {
     console.error("Error:", error);
     replygcqasim("*Error: Could not track the anime or send the video.*");
   }
-  break;
-}
-			case 'shinobu':{
+  break
+};
+case 'shinobu':{
 axios.get(`https://api.waifu.pics/sfw/shinobu`)
 .then(({data}) => {
 GlobalTechInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
@@ -3140,7 +3105,7 @@ GlobalTechInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packnam
 })
 }
 break
-			case 'gura':
+case 'gura':
 case 'gurastick':{
 var ano = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/main/gura')
 var wifegerak = ano.split('\n')
