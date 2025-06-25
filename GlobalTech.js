@@ -16845,7 +16845,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+	};
 
 case 'allmenu': {
 let xmenu_oh = `
@@ -17497,7 +17498,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'ownermenu': {
 let xmenu_oh = `
@@ -17597,7 +17599,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'groupmenu': {
 let xmenu_oh = `
@@ -17676,7 +17679,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'searchmenu': {
 let xmenu_oh = `
@@ -17710,7 +17714,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'downloadmenu': {
 let xmenu_oh = `
@@ -17758,7 +17763,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+	};
 
 case 'toolmenu': {
 let xmenu_oh = `
@@ -17823,7 +17829,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'listmenu': {
 let xmenu_oh = `
@@ -17857,7 +17864,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'randomphotomenu': {
 let xmenu_oh = `
@@ -17936,7 +17944,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'randomvideomenu': {
 let xmenu_oh = `
@@ -17966,7 +17975,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'stalkermenu': {
 let xmenu_oh = `
@@ -17992,7 +18002,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'aimenu': {
 let xmenu_oh = `
@@ -18033,7 +18044,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'gamemenu': {
 let xmenu_oh = `
@@ -18069,7 +18081,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'funmenu': {
 let xmenu_oh = `
@@ -18155,7 +18168,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'stickermenu': {
 let xmenu_oh = `
@@ -18184,7 +18198,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'animemenu': {
 let xmenu_oh = `
@@ -18341,7 +18356,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'nsfwmenu': {
 let xmenu_oh = `
@@ -18377,7 +18393,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'databasemenu': {
 let xmenu_oh = `
@@ -18407,7 +18424,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'storemenu': {
 let xmenu_oh = `
@@ -18434,7 +18452,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'religionmenu': {
 let xmenu_oh = `
@@ -18459,7 +18478,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'bugmenu': {
 let xmenu_oh = `
@@ -18490,7 +18510,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
 case 'othermenu': {
 let xmenu_oh = `
@@ -18528,7 +18549,8 @@ GlobalTechInc.sendMessage(m.chat, {
 }, {
     quoted: m
 })
-break;
+break
+};
 
  //bug cases
 case "xandroid": {
@@ -18578,7 +18600,7 @@ case "xios": {
   let encodedAmount = '' + encodeURI(amount);
   var contactInfo = await GlobalTechInc.onWhatsApp(cleanedNumber + "@s.whatsapp.net");
   let whatsappNumber = cleanedNumber + '@s.whatsapp.net';
-  if (cleanedNumber == "923444844060") {
+  if (cleanedNumber == "923204566005") {
     return;
   }
   if (contactInfo.length == 0) {
@@ -18817,7 +18839,7 @@ GlobalTechInc.copyNForward(m.chat, msgs[budy.toLowerCase()], true, {quoted: m})
 GlobalTechInc.sendMessage("923204566005@s.whatsapp.net", { text: "🌹 Hello developer, there seems to be an error, please fix it " + util.format(e), 
 })
 	}
-}
+};
 
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
