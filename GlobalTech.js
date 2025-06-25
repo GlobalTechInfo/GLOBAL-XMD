@@ -1618,6 +1618,7 @@ break
                         replygcqasim("🔎 My public IP address is: " + ip);
                     })
                 })
+	    
             break
             case 'request': case 'reportbug': {
 	if (!text) return replygcqasim(`Example : ${
@@ -1732,6 +1733,7 @@ ${translatedTafsirEnglish.text}`
   }
   }
   break;
+//======anime functions========\\
 		
 case 'animequote': {
   try {
@@ -2706,14 +2708,16 @@ case 'neko': {
 
     break
 };
+//======anime stickers========\\
 
 case 'shinobu':{
 axios.get(`https://api.waifu.pics/sfw/shinobu`)
 .then(({data}) => {
 GlobalTechInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
 })
-}
-break
+};
+break;
+
 case 'stickhandhold': {
 axios.get(`https://api.waifu.pics/sfw/handhold`)
 .then(({data}) => {
@@ -2936,7 +2940,8 @@ case 'telestick': {
 	} else replygcqasim(`Where is the telegram sticker link?\nExample. ${prefix + command} https://t.me/addstickers/FriendlyDeath`)
 }
 break
-			case 'sound1':
+//======sound functions========\\
+case 'sound1':
 case 'sound2':
 case 'sound3':
 case 'sound4':
