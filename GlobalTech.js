@@ -1646,6 +1646,184 @@ break
 
         }
         break;
+					case 'socialmedia': 
+        case 'sosmed': 
+        case 'update':{
+	const slides = [
+    [
+        'https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png', // Image URL
+        '', // Title
+        `Susbcribe Developer's YouTube Channel To Get Updates`, // Body message
+        botname, // Footer message
+        'Visit', // Button display text
+        'https://youtube.com/@GlobalTechInfo', // Command (URL in this case)
+        'cta_url', // Button type
+        'https://youtube.com/@GlobalTechInfo' // URL (used in image generation)
+    ], 
+    [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/1024px-Telegram_2019_Logo.svg.png', // Image URL
+        '', // Title
+        `Susbcribe Developer's Telegram Channel To Get Updates`, // Body message
+        botname, // Footer message
+        'Visit', // Button display text
+        'http://t.me/GlobalTechInc', // Command (URL in this case)
+        'cta_url', // Button type
+        'http://t.me/GlobalTechInc' // URL (used in image generation)
+    ], 
+    [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/360px-GitHub_Invertocat_Logo.svg.png', // Image URL
+        '', // Title
+        `Follow Developer On GitHub`, // Body message
+        botname, // Footer message
+        'Visit', // Button display text
+        'https://github.com/GlobalTechInfo', // Command (URL in this case)
+        'cta_url', // Button type
+        'https://github.com/GlobalTechInfo' // URL (used in image generation)
+    ], 
+    [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/264px-Instagram_logo_2016.svg.png', // Image URL
+        '', // Title
+        `Follow Developer On WhatsApp`, // Body message
+        botname, // Footer message
+        'Visit', // Button display text
+        'https://www.instagram.com/unicorn_xeon13', // Command (URL in this case)
+        'cta_url', // Button type
+        'https://www.instagram.com/unicorn_xeon13' // URL (used in image generation)
+    ], 
+    [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png', // Image URL
+        '', // Title
+        `Contact Developer On WhatsApp`, // Body message
+        botname, // Footer message
+        'Visit', // Button display text
+        'https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07', // Command (URL in this case)
+        'cta_url', // Button type
+        'https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07' // URL (used in image generation)
+    ], 
+];
+
+const sendSlide = async (jid, title, message, footer, slides) => {
+    const cards = slides.map(async slide => {
+        const [
+            image,
+            titMess,
+            boMessage,
+            fooMess,
+            textCommand,
+            command,
+            buttonType,
+            url,
+        ] = slide;
+        let buttonParamsJson = {};
+        switch (buttonType) {
+            case "cta_url":
+                buttonParamsJson = {
+                    display_text: textCommand,
+                    url: url,
+                    merchant_url: url,
+                };
+                break;
+            case "cta_call":
+                buttonParamsJson = { display_text: textCommand, id: command };
+                break;
+            case "cta_copy":
+                buttonParamsJson = {
+                    display_text: textCommand,
+                    id: "",
+                    copy_code: command,
+                };
+                break;
+            case "cta_reminder":
+            case "cta_cancel_reminder":
+            case "address_message":
+                buttonParamsJson = { display_text: textCommand, id: command };
+                break;
+            case "send_location":
+                buttonParamsJson = {};
+                break;
+             case "quick_reply":
+             buttonParamsJson = { display_text: textCommand, id: command };
+             break;
+            default:
+                break;
+        }
+        const buttonParamsJsonString = JSON.stringify(buttonParamsJson);
+        return {
+            body: proto.Message.InteractiveMessage.Body.fromObject({
+                text: boMessage,
+            }),
+            footer: proto.Message.InteractiveMessage.Footer.fromObject({
+                text: fooMess,
+            }),
+            header: proto.Message.InteractiveMessage.Header.fromObject({
+                title: titMess,
+                hasMediaAttachment: true,
+                ...(await prepareWAMessageMedia(
+                    { image: { url: image } },
+                    { upload: GlobalTechInc.waUploadToServer },
+                )),
+            }),
+            nativeFlowMessage:
+                proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
+                    buttons: [
+                        {
+                            name: buttonType,
+                            buttonParamsJson: buttonParamsJsonString,
+                        },
+                    ],
+                }),
+        };
+    });
+    
+    const msg = generateWAMessageFromContent(
+        jid,
+        {
+            viewOnceMessage: {
+                message: {
+                    messageContextInfo: {
+                        deviceListMetadata: {},
+                        deviceListMetadataVersion: 2,
+                    },
+                    interactiveMessage: proto.Message.InteractiveMessage.fromObject({
+                        body: proto.Message.InteractiveMessage.Body.fromObject({
+                            text: message,
+                        }),
+                        footer: proto.Message.InteractiveMessage.Footer.fromObject({
+                            text: footer,
+                        }),
+                        header: proto.Message.InteractiveMessage.Header.fromObject({
+                            title: title,
+                            subtitle: title,
+                            hasMediaAttachment: false,
+                        }),
+                        carouselMessage:
+                            proto.Message.InteractiveMessage.CarouselMessage.fromObject({
+                                cards: await Promise.all(cards),
+                            }),
+                            contextInfo: {
+                  mentionedJid: [m.sender], 
+                  forwardingScore: 999,
+                  isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                  newsletterJid: global.xchannel.jid,
+                  newsletterName: ownername,
+                  serverMessageId: 143
+                }
+                }
+                    }),
+                },
+            },
+        },
+        { quoted: m},
+    );
+    await GlobalTechInc.relayMessage(jid, msg.message, {
+        messageId: msg.key.id,
+    });
+};
+// Call the function with example parameters
+sendSlide(m.chat, 'removed you', ownername, botname, slides);
+}
+break
 
 case 'gita-verse': case 'gita': case 'bhagavatgita': {
 	try {
