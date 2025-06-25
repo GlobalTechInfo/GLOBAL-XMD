@@ -1842,55 +1842,6 @@ case 'animequote': {
 }
 break;
 
-case 'bible': {
-  const { translate } = require('@vitalets/google-translate-api');
-  const BASE_URL = 'https://bible-api.com';
-
-  try {
-    // Extract the chapter or verse input from the command text
-    let chapterInput = m.text.split(' ').slice(1).join(' ').trim();
-    if (!chapterInput) {
-      throw new Error(`Please specify the chapter number or name. Example: ${prefix + command} john 3:16`);
-    }
-
-    // Encode input for URL
-    chapterInput = encodeURIComponent(chapterInput);
-
-    // Fetch chapter/verse data from Bible API
-    let chapterRes = await fetch(`${BASE_URL}/${chapterInput}`);
-    if (!chapterRes.ok) {
-      throw new Error(`Please specify the chapter number or name. Example: ${prefix + command} john 3:16`);
-    }
-
-    let chapterData = await chapterRes.json();
-
-    // Translate the chapter text to Hindi and English
-    let translatedChapterHindi = await translate(chapterData.text, { to: 'hi', autoCorrect: true });
-    let translatedChapterEnglish = await translate(chapterData.text, { to: 'en', autoCorrect: true });
-
-    // Prepare the message text
-    let bibleChapter = `
-📖 *The Holy Bible*
-
-📜 *Chapter ${chapterData.reference}*
-Type: ${chapterData.translation_name}
-Number of verses: ${chapterData.verses.length}
-
-🔮 *Chapter Content (English):*
-${translatedChapterEnglish.text}
-
-🔮 *Chapter Content (Hindi):*
-${translatedChapterHindi.text}
-    `;
-
-    // Send plain text reply without buttons or media
-    return replygcqasim(bibleChapter);
-  } catch (error) {
-    return replygcqasim(`Error: ${error.message}`);
-  }
-}
-break;
-
 case 'addlist':
 if (!QasimTheCreator) return QasimStickOwner()
 if (!m.isGroup) return QasimStickGroup()
@@ -2847,54 +2798,6 @@ case 'neko': {
     break
 };
 
-case 'traceanime': {
-  try {
-    let q = m.quoted ? m.quoted : m;
-    let mime = (q.msg || q).mimetype || q.mediaType || "";
-    if (!mime.startsWith('image')) {
-      return replygcqasim("*Respond to an image*");
-    }
-
-    let data = await q.download();
-    let image = await uploadImage(data);
-    let apiUrl = `https://api.trace.moe/search?anilistInfo&url=${encodeURIComponent(image)}`;
-    let response = await fetch(apiUrl);
-    let result = await response.json();
-
-    if (!result || result.error || result.result.length === 0) {
-      return replygcqasim("*Error: Could not track the anime.*");
-    }
-
-    let { anilist, from, to, similarity, video, episode } = result.result[0];
-    let animeTitle = anilist.title ? anilist.title.romaji || anilist.title.native : "Unknown Title";
-
-    let message = `*Anime:* ${animeTitle}\n`;
-    if (anilist.synonyms && anilist.synonyms.length > 0) {
-      message += `*Synonyms:* ${anilist.synonyms.join(", ")}\n`;
-    }
-    message += `*Similarity:* ${similarity.toFixed(2)}%\n`;
-    message += `*Time:* ${formatDuration(from * 1000)} - ${formatDuration(to * 1000)}\n`;
-    if (episode) message += `*Episode:* ${episode}\n`;
-
-    // First, send the text info
-    await GlobalTechInc.sendMessage(m.chat, {
-      text: message,
-      mentions: [m.sender]
-    }, { quoted: m });
-
-    // Then, send the video without interactive message wrappers
-    await GlobalTechInc.sendMessage(m.chat, {
-      video: { url: video },
-      caption: `Preview clip for ${animeTitle}`,
-      gifPlayback: true
-    }, { quoted: m });
-
-  } catch (error) {
-    console.error("Error:", error);
-    replygcqasim("*Error: Could not track the anime or send the video.*");
-  }
-  break
-};
 case 'shinobu':{
 axios.get(`https://api.waifu.pics/sfw/shinobu`)
 .then(({data}) => {
@@ -3104,16 +3007,8 @@ case 'sticktickle':{
 GlobalTechInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
 })
 }
-break
-case 'gura':
-case 'gurastick':{
-var ano = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/main/gura')
-var wifegerak = ano.split('\n')
-var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
-encmedia = await GlobalTechInc.sendImageAsSticker(m.chat, wifegerakx, m, { packname: global.packname, author: global.author, })
+break;
 
-}
-break
 case 'telestick': {
 	if (m.isGroup) return XeonStickPrivate()
 		if (args[0] && args[0].match(/(https:\/\/t.me\/addstickers\/)/gi)) {
