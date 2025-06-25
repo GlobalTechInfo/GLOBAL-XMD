@@ -4733,52 +4733,24 @@ _*Here is the result of ${command}*_`
 }, { quoted: m })
 return await GlobalTechInc.relayMessage(m.chat, msgs.message, {})
                 }
-break
+break;
+				
 case 'lizardpic': {
-await QasimStickWait()
- waifudd = await axios.get(`https://nekos.life/api/v2/img/lizard`)     
-            let msgs = generateWAMessageFromContent(m.chat, {
-  viewOnceMessage: {
-    message: {
-        "messageContextInfo": {
-          "deviceListMetadata": {},
-          "deviceListMetadataVersion": 2
-        },
-        interactiveMessage: proto.Message.InteractiveMessage.create({
-          body: proto.Message.InteractiveMessage.Body.create({
-            text: `Hi ${m.pushName}
-_*Here is the result of ${command}*_`
-          }),
-          footer: proto.Message.InteractiveMessage.Footer.create({
-            text: botname
-          }),
-          header: proto.Message.InteractiveMessage.Header.create({
-          hasMediaAttachment: false,
-          ...await prepareWAMessageMedia({ image: { url:waifudd.data.url}}, { upload: GlobalTechInc.waUploadToServer })
-          }),
-          nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-            buttons: [{
-            "name": "quick_reply",
-              "buttonParamsJson": `{\"display_text\":\"Next ➡️\",\"id\":\"${prefix+command}"}`
-            }],
-          }), 
-          contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: global.xchannel.jid,
-                  newsletterName: ownername,
-                  serverMessageId: 143
-                }
-                }
-       })
-    }
-  }
-}, { quoted: m })
-return await GlobalTechInc.relayMessage(m.chat, msgs.message, {})
-                }
-break
+    await QasimStickWait()
+    const waifudd = await axios.get(`https://nekos.life/api/v2/img/lizard`)
+
+    // Prepare caption text
+    const captionText = `Hi ${m.pushName}\n_*Here is the result of ${command}*_`
+
+    // Send image with caption, no buttons or forwarding info
+    await GlobalTechInc.sendMessage(m.chat, {
+        image: { url: waifudd.data.url },
+        caption: captionText
+    }, { quoted: m })
+
+    break
+}
+				
 case 'catmeow': {
 await QasimStickWait()
  waifudd = await axios.get(`https://nekos.life/api/v2/img/meow`)     
