@@ -1553,63 +1553,7 @@ title: botname
 }
 //======end bug functions========\\
 
-case 'gaycheck':
-case 'cutecheck':
-case 'lesbicheck':
-case 'lesbiancheck':
-case 'hornycheck':
-case 'prettycheck':
-case 'lovelycheck':
-case 'uglycheck':
-case 'handsomecheck': {
-    if (!text) return replygcqasim(`Tag Someone, Example : ${prefix + command} @username`)
-
-    const gan = Array.from({ length: 100 }, (_, i) => (i + 1).toString())
-    const teng = gan[Math.floor(Math.random() * gan.length)]
-
-    const messageText = `*${command}*\n\nName : ${q}\nAnswer : *${teng}%*`
-
-    // Send image with caption (no buttons or interactive elements)
-    await GlobalTechInc.sendMessage(m.chat, {
-        image: fs.readFileSync('./GlobalMedia/theme/global.jpg'),
-        caption: messageText
-    }, { quoted: m })
-
-    break
-}
-
-case 'beautifulcheck': {
-  if (!text) return replygcqasim(`Tag Someone, Example : ${prefix + command} @Xeon`);
-  
-  const can = Array.from({ length: 100 }, (_, i) => (i + 1).toString());
-  const tik = can[Math.floor(Math.random() * can.length)];
-  
-  const response = `*${command}*\n\nName : ${q}\nAnswer : *${tik}%*`;
-  return replygcqasim(response);
-}
-break;
-
-case 'charactercheck': {
-  if (!text) return replygcqasim(`Tag Someone, Example : ${prefix + command} @Xeon`);
-  
-  const xeony = ['Compassionate', 'Generous', 'Grumpy', 'Forgiving', 'Obedient', 'Good', 'Simp', 'Kind-Hearted', 'Patient', 'UwU', 'Top, anyway', 'Helpful'];
-  const taky = xeony[Math.floor(Math.random() * xeony.length)];
-  
-  const response = `Character Check : ${q}\nAnswer : *${taky}*`;
-  return replygcqasim(response);
-}
-break;
-
-case 'gura':
-case 'gurastick':{
-var ano = await fetchJson('https://raw.githubusercontent.com/DGXeon/XeonMedia/main/gura')
-var wifegerak = ano.split('\n')
-var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
-encmedia = await GlobalTechInc.sendImageAsSticker(m.chat, wifegerakx, m, { packname: global.packname, author: global.author, })
-
-}
-break
-			case 'rentbot':
+case 'rentbot':
                 replygcqasim(`Type ${prefix}owner and chat him`)
                 break
 			case "idgroup": case "idgc": case "groupid": {
@@ -1625,7 +1569,7 @@ teks += `◉ Name : ${metadata2.subject}\n◉ ID : ${metadata2.id}\n◉ Member :
 replygcqasim(teks + `To Use Please Type Command ${prefix}pushcontact idgroup|teks\n\nBefore using, please first copy the group id above`)
 }
 break
-			case 'repo': case 'repository': {
+case 'repo': case 'repository': {
   try {
     const [, username, repoName] = botscript.match(/github\.com\/([^/]+)\/([^/]+)/)
     const response = await axios.get(`https://api.github.com/repos/${username}/${repoName}`)
@@ -1661,7 +1605,7 @@ ${themeemoji} URL: ${repoData.html_url}
   }
 }
 break
-			case 'myip':
+	case 'myip':
             case 'ipbot':
                 if (!QasimTheCreator) return QasimStickOwner()
                 var http = require('http')
