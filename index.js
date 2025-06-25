@@ -42,6 +42,7 @@ const NodeCache = require('node-cache');
 
 
 const PhoneNumber = require('awesome-phonenumber');
+const PHONENUMBER_MCC = require('./lib/Phone');
 
 
 
