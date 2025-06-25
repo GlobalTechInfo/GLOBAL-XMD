@@ -1644,43 +1644,8 @@ break
             })
 
         }
-        break
-case 'socialmedia':
-case 'sosmed':
-case 'update': {
-  const slides = [
-    {
-      image: 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png',
-      message: `Subscribe Developer's YouTube Channel To Get Updates\nhttps://youtube.com/@GlobalTechInfo`
-    },
-    {
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/1024px-Telegram_2019_Logo.svg.png',
-      message: `Subscribe Developer's Telegram Channel To Get Updates\nhttp://t.me/GlobalTechInc`
-    },
-    {
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/360px-GitHub_Invertocat_Logo.svg.png',
-      message: `Follow Developer On GitHub\nhttps://github.com/GlobalTechInfo`
-    },
-    {
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/264px-Instagram_logo_2016.svg.png',
-      message: `Follow Developer On Instagram\nhttps://www.instagram.com/unicorn_xeon13`
-    },
-    {
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png',
-      message: `Contact Developer On WhatsApp\nhttps://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07`
-    }
-  ];
+        break;
 
-  // Combine all messages into one text block
-  let combinedMessage = `*${botname} Social Media Links:*\n\n`;
-  slides.forEach((slide, index) => {
-    combinedMessage += `🔹 ${slide.message}\n\n`;
-  });
-
-  // Send as a simple text reply
-  return replygcqasim(combinedMessage);
-}
-break;
 case 'gita-verse': case 'gita': case 'bhagavatgita': {
 	try {
     // Extract the verse number from the command text.
