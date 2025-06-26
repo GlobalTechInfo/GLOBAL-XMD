@@ -1,0 +1,3 @@
+{
+  "ignore": ["qasimdev", "node_modules", "database", "logs"]
+}
