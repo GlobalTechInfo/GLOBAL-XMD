@@ -24,7 +24,7 @@
 #### Join Group
 [![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/FJ6h6DvenWaLXMfP0JXSmQ) 
 
----
+----
 #### Deploy to Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/GlobalTechInfo/GLOBAL-XMD)
 
@@ -36,7 +36,7 @@
 | **WEBP** | [here](https://github.com/clhuang/heroku-buildpack-webp-binaries.git) |
 | **IMAGEMAGICK** | [here](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
 
----
+----
 ## For Windows/VPS/RDP User
 * Download And Install Git [`Click Here`](https://git-scm.com/downloads)
 * Download And Install NodeJS [`Click Here`](https://nodejs.org/en/download)
@@ -105,5 +105,5 @@ License: [Apache License](http://www.apache.org/licenses/)
 ## Credits
 
 | [![Nazedev](https://github.com/nazedev.png?size=100)](https://github.com/nazedev) | [![Qasim Ali](https://github.com/GlobalTechInfo.png?size=100)](https://github.com/GlobalTechInfo) | [![WhiskeySockets](https://github.com/WhiskeySockets.png?size=100)](https://github.com/WhiskeySockets) |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | [NazeDev](https://github.com/nazedev) | [Qasim Ali](https://github.com/GlobalTechInfo) |[WhiskeySockets](https://github.com/WhiskeySockets) |
