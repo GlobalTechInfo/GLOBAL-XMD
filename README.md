@@ -1,6 +1,6 @@
 
 <p align="center">
-<a href="https://github.com/GlobalTechInfo"><img title="Author" src="https://i.ibb.co/61n4rdK/Ephoto360-com-166ccb8e494006.jpg?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/GlobalTechInfo"><img title="Author" src="https://i.ibb.co/GQ7DnnQ9/global.jpg?style=for-the-badge&logo=github"></a>
 
 ### GLOBAL-XMD is a Cool Multi-Device WhatsApp bot developed by [GlobalTechInfo](https://github.com/GlobalTechInfo). It offers a wide range of extraordinary features, making it an advanced and user-friendly bot for various purposes.
 
@@ -16,14 +16,11 @@
 | --------| ----- | ---- | ----- | -------- | ------- | ------- | ------|---------| -----|
 | Work ➜ |   ✅  |   ✅ |   ✅  |    ✅    |    ✅   |    ✅   |   ✅  |    ✅   |  ✅  |
 
-## PAIR SERVER 1
-<a href='https://globalpair-code.onrender.com/' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/PAIRING CODE-1-green?style=for-the-badge&logo=opencv&logoColor=white'/></a>
 
-## PAIR SERVER 2
+PAIR SERVER
 
 <a href='https://replit.com/@tlptrends92/GLOBAL-SESSIONS#main.sh' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/PAIRING CODE-2-green?style=for-the-badge&logo=opencv&logoColor=white'/></a>
 
-`AFTER YOU GET CREDS FILE UPLOAD IT INSIDE SESSION FOLDER OF FORK`
 
 ### DEPLOY TO HEROKU 
 
@@ -38,15 +35,35 @@ src='https://img.shields.io/badge/HOSTING%20PANEL-blue?style=for-the-badge&logo=
 
 
 ### `For Termux/Ubuntu`
-```bash
+```
 apt update && apt upgrade -y
+```
+```
 pkg install proot-distro
+```
+```
 proot-distro install ubuntu
+```
+```
 proot-distro login ubuntu
+```
+```
 apt update && apt upgrade -y
-apt install -y webp git nodejs ffmpeg imagemagick
+```
+```
+apt install -y webp git wget curl ffmpeg imagemagick
+```
+```
+apt -y remove nodejs
+curl -fsSl https://deb.nodesource.com/setup_20.x | bash - && apt -y install nodejs
+```
+```
 git clone https://github.com/<your gitHub Username>/GLOBAL-XMD
+```
+```
 cd GLOBAL-XMD
 npm install
+```
+```
 node index --pairing-code
 ```
