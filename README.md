@@ -3,7 +3,6 @@
     <img alt="Global" src="https://i.ibb.co/GQ7DnnQ9/global.jpg">
   </a>
 </p>
-<div align="center">
 
 ----
 
