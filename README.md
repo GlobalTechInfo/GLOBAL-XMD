@@ -18,12 +18,58 @@
 <a href="https://github.com/GlobalTechInfo/GLOBAL-XMD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/GlobalTechInfo/GLOBAL-XMD?label=Forks&color=blue&style=flat-square"></a>
 <a href="https://github.com/GlobalTechInfo/GLOBAL-XMD/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/GlobalTechInfo/GLOBAL-XMD?label=Stars&color=yellow&style=flat-square"></a>
 <a href="https://github.com/GlobalTechInfo/GLOBAL-XMD/issues"><img title="Issues" src="https://img.shields.io/github/issues/GlobalTechInfo/GLOBAL-XMD?label=Issues&color=success&style=flat-square"></a>
+<a href="https://github.com/GlobalTechInfo/GLOBAL-XMD/repo-size"><img title="RepoSize" src="https://img.shields.io/github/repo-size/GlobalTechInfo/GLOBAL-XMD?label=RepoSize&color=success&style=flat-square"></a>
 </div>
 
 #### Join Group
 [![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/FJ6h6DvenWaLXMfP0JXSmQ) 
 
 ----
+
+## Table of Contents
+- [Information](#-information)
+- [Deployments](#-deployment-options)
+- [Connections](#-connection-options)
+- [Bot Features](#-features)
+- [Important Notice](#-disclaimer)
+- [Developers](#️-credits)
+
+----
+----
+
+<h2 align="center">  NOTE
+</h2>
+
+**Remember If you going to deploy in panel,render or koyeb. you have to enter your number in settings.js before deployment. Format: global.number_bot = '92320xx'**
+
+----
+## Deployment Options
+
+<p align="center">
+  <table>
+    <tr>
+      <th>Platform</th>
+      <th>Deploy Button</th>
+    </tr>
+    <tr>
+      <td>Koyeb</td>
+      <td><a href="https://app.koyeb.com/services/deploy?type=git&repository=GlobalTechInfo/GLOBAL-XMD&ports=3000"><img src="https://img.shields.io/badge/Deploy_to-Koyeb-121212?style=for-the-badge&logo=koyeb"></a></td>
+    </tr>
+    <tr>
+      <td>Railway</td>
+      <td><a href="https://railway.app/new"><img src="https://img.shields.io/badge/Deploy_to-Railway-0B0D0E?style=for-the-badge&logo=railway"></a></td>
+    </tr>
+    <tr>
+      <td>Render</td>
+      <td><a href="https://dashboard.render.com/web/new"><img src="https://img.shields.io/badge/Deploy_to-Render-0B0D0E?style=for-the-badge&logo=render"></a></td>
+    </tr>
+  </table>
+</p>
+
+---
+
+**You can also deploy in codespace replit and panel.**
+
 #### Deploy to Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/GlobalTechInfo/GLOBAL-XMD)
 
@@ -101,6 +147,21 @@ License: [Apache License](http://www.apache.org/licenses/)
 #### Support Me
 - [Subscribe](https://youtube.com/@GlobalTechInfo)
 
+### Disclaimer
+```diff
+- This is an independent project not affiliated with WhatsApp Inc.
+- Account bans may occur with misuse (only 1 unban allowed)
+- Use at your own risk - no liability for bans/misuse
+```
+
+### Terms of Use
+```diff
++ Strictly NOT FOR SALE
++ No unauthorized copying/distribution
++ Credit must be given when using/modifying
+```
+
+---
 ## Credits
 
 | [![Nazedev](https://github.com/nazedev.png?size=100)](https://github.com/nazedev) | [![Qasim Ali](https://github.com/GlobalTechInfo.png?size=100)](https://github.com/GlobalTechInfo) | [![WhiskeySockets](https://github.com/WhiskeySockets.png?size=100)](https://github.com/WhiskeySockets) |
