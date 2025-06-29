@@ -35,7 +35,6 @@
 - [Developers](#️-credits)
 
 ----
-----
 
 <h2 align="center">  NOTE
 </h2>
@@ -43,6 +42,7 @@
 **Remember If you going to deploy in panel,render or koyeb. you have to enter your number in settings.js before deployment. Format: global.number_bot = '92320xx'**
 
 ----
+
 ## Deployment Options
 
 <p align="center">
@@ -148,18 +148,17 @@ License: [Apache License](http://www.apache.org/licenses/)
 - [Subscribe](https://youtube.com/@GlobalTechInfo)
 
 ### Disclaimer
-```diff
+
 - This is an independent project not affiliated with WhatsApp Inc.
 - Account bans may occur with misuse (only 1 unban allowed)
 - Use at your own risk - no liability for bans/misuse
-```
+
 
 ### Terms of Use
-```diff
-+ Strictly NOT FOR SALE
-+ No unauthorized copying/distribution
-+ Credit must be given when using/modifying
-```
+
+- Strictly NOT FOR SALE
+- No unauthorized copying/distribution
+- Credit must be given when using/modifying
 
 ---
 ## Credits
