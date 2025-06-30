@@ -4536,14 +4536,18 @@ break;
 ├ *Owner* : @${owner[0].split('@')[0]}
 ├ *Mode* : ${qasim.public ? 'Public' : 'Self'}
 ├ *Prefix* :${set.multiprefix ? '「 MULTI-PREFIX 」' : ' *'+prefix+'*' }
-├ *Premium Feature* : 
+├ *Premium Feature* : 🅟
 ╰─┬────❍
 ╭─┴─❍「 *ABOUT* 」❍
 ├ *Date* : ${tanggal}
 ├ *Day* : ${hari}
 ├ *Time* : ${jam} WIB
 ╰──────❍
-╭──❍「 *BOT* 」❍
+╭──❍「 *SETTING* 」❍
+│${setv} ${prefix}bot set
+│${setv} ${prefix}group set
+╰─┬────❍
+╭─┴─❍「 *BOT* 」❍
 │${setv} ${prefix}profile
 │${setv} ${prefix}claim
 │${setv} ${prefix}buy
@@ -4556,8 +4560,8 @@ break;
 │${setv} ${prefix}features
 │${setv} ${prefix}speed
 │${setv} ${prefix}ping
-│${setv} ${prefix}afk 
-│${setv} ${prefix}rvo 
+│${setv} ${prefix}afk
+│${setv} ${prefix}rvo
 │${setv} ${prefix}inspect
 │${setv} ${prefix}addmsg
 │${setv} ${prefix}delmsg
@@ -4568,7 +4572,7 @@ break;
 │${setv} ${prefix}confes
 │${setv} ${prefix}autoai
 │${setv} ${prefix}delautoai
-│${setv} ${prefix}rentbot 
+│${setv} ${prefix}rentbot 🅟
 │${setv} ${prefix}stoprent
 │${setv} ${prefix}listrent
 │${setv} ${prefix}donasi
@@ -4590,7 +4594,7 @@ break;
 │${setv} ${prefix}linkgrup
 │${setv} ${prefix}revoke
 │${setv} ${prefix}tagall
-│${setv} ${prefix}pin 
+│${setv} ${prefix}pin
 │${setv} ${prefix}unpin
 │${setv} ${prefix}hidetag
 │${setv} ${prefix}totag
@@ -4642,8 +4646,8 @@ break;
 │${setv} ${prefix}why
 ╰─┬────❍
 ╭─┴❍「 *TOOLS* 」❍
-│${setv} ${prefix}get 
-│${setv} ${prefix}hd 
+│${setv} ${prefix}get 🅟
+│${setv} ${prefix}hd
 │${setv} ${prefix}define
 │${setv} ${prefix}toaudio
 │${setv} ${prefix}tomp3
@@ -4651,11 +4655,11 @@ break;
 │${setv} ${prefix}toimage
 │${setv} ${prefix}toptv
 │${setv} ${prefix}tourl
-│${setv} ${prefix}tts 
+│${setv} ${prefix}tts
 │${setv} ${prefix}toqr
 │${setv} ${prefix}brat
 │${setv} ${prefix}bratvid
-│${setv} ${prefix}ssweb 
+│${setv} ${prefix}ssweb 🅟
 │${setv} ${prefix}sticker
 │${setv} ${prefix}colong
 │${setv} ${prefix}smeme
@@ -4665,13 +4669,13 @@ break;
 │${setv} ${prefix}emojimix
 │${setv} ${prefix}nulis
 │${setv} ${prefix}readmore
-│${setv} ${prefix}qc 
+│${setv} ${prefix}qc
 │${setv} ${prefix}translate
 │${setv} ${prefix}wasted
 │${setv} ${prefix}triggered
 │${setv} ${prefix}shorturl
 │${setv} ${prefix}gitclone
-│${setv} ${prefix}fat 
+│${setv} ${prefix}fat
 │${setv} ${prefix}fast
 │${setv} ${prefix}bass
 │${setv} ${prefix}slow
@@ -4686,7 +4690,7 @@ break;
 │${setv} ${prefix}getexif
 ╰─┬────❍
 ╭─┴❍「 *AI* 」❍
-│${setv} ${prefix}ai 
+│${setv} ${prefix}ai
 │${setv} ${prefix}simi
 │${setv} ${prefix}gemini
 │${setv} ${prefix}txt2img
@@ -4785,6 +4789,7 @@ break;
 │${setv} ${prefix}bot [set]
 │${setv} ${prefix}setbio
 │${setv} ${prefix}setppbot
+│${setv} ${prefix}setting
 │${setv} ${prefix}join
 │${setv} ${prefix}leave
 │${setv} ${prefix}block
@@ -4811,9 +4816,9 @@ break;
 │${setv} ${prefix}delsampah
 │${setv} ${prefix}upsw
 │${setv} ${prefix}backup
-│${setv} $
-│${setv} >
-│${setv} <
+│${setv} $ 🅞
+│${setv} > 🅞
+│${setv} < 🅞
 ╰──────❍`
 				await m.reply({
 					document: fake.docs,
@@ -4846,6 +4851,14 @@ break;
 				})
 			}
 			break
+				case 'set': case 'setting': case 'settings': {
+				m.reply(`
+╭──❍「 *SETTING* 」❍
+│${setv} ${prefix}bot set
+│${setv} ${prefix}group set
+╰──────❍`)
+			}
+			break
 			case 'botmenu': {
 				m.reply(`
 ╭──❍「 *BOT* 」❍
@@ -4861,8 +4874,8 @@ break;
 │${setv} ${prefix}features
 │${setv} ${prefix}speed
 │${setv} ${prefix}ping
-│${setv} ${prefix}afk 
-│${setv} ${prefix}rvo 
+│${setv} ${prefix}afk
+│${setv} ${prefix}rvo
 │${setv} ${prefix}inspect
 │${setv} ${prefix}addmsg
 │${setv} ${prefix}delmsg
@@ -4873,7 +4886,7 @@ break;
 │${setv} ${prefix}confes
 │${setv} ${prefix}autoai
 │${setv} ${prefix}delautoai
-│${setv} ${prefix}rentbot 
+│${setv} ${prefix}rentbot 🅟
 │${setv} ${prefix}stoprent
 │${setv} ${prefix}listrent
 │${setv} ${prefix}donasi
@@ -4899,7 +4912,7 @@ break;
 │${setv} ${prefix}linkgrup
 │${setv} ${prefix}revoke
 │${setv} ${prefix}tagall
-│${setv} ${prefix}pin 
+│${setv} ${prefix}pin 🅟
 │${setv} ${prefix}unpin
 │${setv} ${prefix}hidetag
 │${setv} ${prefix}totag
@@ -4967,8 +4980,8 @@ break;
 			case 'toolsmenu': {
 				m.reply(`
 ╭──❍「 *TOOLS* 」❍
-│${setv} ${prefix}get 
-│${setv} ${prefix}hd 
+│${setv} ${prefix}get 🅟
+│${setv} ${prefix}hd
 │${setv} ${prefix}define
 │${setv} ${prefix}toaudio
 │${setv} ${prefix}tomp3
@@ -4976,11 +4989,11 @@ break;
 │${setv} ${prefix}toimage
 │${setv} ${prefix}toptv
 │${setv} ${prefix}tourl
-│${setv} ${prefix}tts 
+│${setv} ${prefix}tts
 │${setv} ${prefix}toqr
 │${setv} ${prefix}brat
 │${setv} ${prefix}bratvid
-│${setv} ${prefix}ssweb 
+│${setv} ${prefix}ssweb 🅟
 │${setv} ${prefix}sticker
 │${setv} ${prefix}colong
 │${setv} ${prefix}smeme
@@ -4990,7 +5003,7 @@ break;
 │${setv} ${prefix}emojimix
 │${setv} ${prefix}nulis
 │${setv} ${prefix}readmore
-│${setv} ${prefix}qc 
+│${setv} ${prefix}qc
 │${setv} ${prefix}translate
 │${setv} ${prefix}wasted
 │${setv} ${prefix}triggered
@@ -5138,6 +5151,7 @@ break;
 │${setv} ${prefix}bot [set]
 │${setv} ${prefix}setbio
 │${setv} ${prefix}setppbot
+│${setv} ${prefix}setting
 │${setv} ${prefix}join
 │${setv} ${prefix}leave
 │${setv} ${prefix}block
@@ -5164,9 +5178,9 @@ break;
 │${setv} ${prefix}delsampah
 │${setv} ${prefix}upsw
 │${setv} ${prefix}backup
-│${setv} $
-│${setv} >
-│${setv} <
+│${setv} $ 🅞
+│${setv} > 🅞
+│${setv} < 🅞
 ╰──────❍`)
 			}
 			break
