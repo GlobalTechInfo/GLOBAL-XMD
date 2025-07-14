@@ -10,22 +10,22 @@ const chalk = require('chalk');
 //~~~~~~~~~~~~< GLOBAL SETTINGS >~~~~~~~~~~~~\\
 
 
-global.owner = process.env.OWNER_NUMBER ? process.env.OWNER_NUMBER.split(',').map(v => v.trim()) : ['923204566005'];
+global.owner = process.env.OWNER_NUMBER ? process.env.OWNER_NUMBER.split(',').map(v => v.trim()) : ['923288330026','];
 
-global.packname = process.env.PACKNAME || 'BOT';
-global.author = process.env.AUTHOR || 'GlobalTechInfo';
-global.botname = process.env.BOT_NAME || 'GLOBAL-XMD';
+global.packname = process.env.PACKNAME || '𝐌ꝛ 𝐃-ꭙ𝚗𝗍 𝐙𝐢𝐝𝐢𝐢';
+global.author = process.env.AUTHOR || '💳';
+global.botname = process.env.BOT_NAME || '`𝐌ꝛ 𝐃-ꭙ𝚗𝗍 𝐙𝐢𝐝𝐢𝐢`';
 global.listprefix = process.env.PREFIX ? process.env.PREFIX.split(',') : ['+','!','.'];
 global.listv = ['•','●','■','✿','▲','➩','➢','➣','➤','✦','✧','△','❀','○','□','♤','♡','◇','♧','々','〆'];
 
-global.tempatDB = process.env.MONGODB_URI || 'database.json';
+global.tempatDB = process.env.MONGODB_URI || 'mongodb+srv://Muhammad-ZaHid:261894@muhammadzahid.ykisuxs.mongodb.net/?retryWrites=true&w=majority&appName=MuhammadZaHid';
 global.tempatStore = process.env.MONGODB_URI || 'baileys_store.json';
 global.timezone = process.env.TIME_ZONE || 'UTC'
-global.pairing_code = process.env.PAIRING_CODE !== 'false';
-global.number_bot = process.env.BOT_NUMBER || '';
+global.pairing_code = process.env.PAIRING_CODE !== 'true';
+global.number_bot = process.env.BOT_NUMBER || '923276326230';
 
 global.my = {
-	yt: process.env.MY_YOUTUBE || 'https://youtube.com/@GlobalTechInfo',
+	yt: process.env.MY_YOUTUBE || 'https://youtube.com/@zidii_decent_boy',
 	gh: process.env.MY_GITHUB || 'https://github.com/GlobalTechInfo',
 	gc: process.env.MY_GROUP || 'https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07',
 	ch: process.env.MY_CHANNEL || '120363319098372999@newsletter'
