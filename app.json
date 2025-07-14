@@ -1,0 +1,65 @@
+{
+  "name": "global",
+  "description": "WhatsApp Bot Using Baileys Library",
+  "repository": "https://github.com/GlobalTechInfo/GLOBAL-XMD",
+  "stack": "container",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["whatsapp-bot", "multi-device", "bot", "whatsapp"],
+  "env": {
+    "OWNER_Number": {
+      "description": "one or two owner number split with qoma",
+      "required": true,
+      "value": ""
+    },
+    "BOT_NAME": {
+      "description": "Give your BOT a name",
+      "required": false,
+      "value": "GLOBAL-XMD"
+    },
+    "BOT_NUMBER": {
+      "description": "WhatsApp phone number for pairing code",
+      "required": true,
+      "value": "923001234567"
+    },
+    "TIME_ZONE": {
+      "description": "Your Time Zone For Example Africa/Nairobi",
+      "required": false,
+      "value": "UTC"
+    },
+    "PREFIX": {
+      "description": "put any one or more symbols in it split with qomma",
+      "required": true,
+      "value": ""
+    },
+     "HKEY": {
+      "description": "Put your Heroku api key Here , Get one from here https://dashboard.heroku.com/account",
+      "required": true,
+      "value": ""
+    },
+     "HAPP": {
+      "description": "Put the Heroku app name, same as above entered",
+      "required": true,
+      "value": ""
+    }
+    },
+    "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
